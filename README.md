@@ -4,6 +4,8 @@ Hey! I'm Adesh Kadu, an Artificial Intelligence & Data Science student who enjoy
 
 This is my personal portfolio — a place where I bring together my projects, skills, education, and internship experience. I built it to introduce myself, share what I've been learning, and make it easier for people to get in touch.
 
+🌐 **Live portfolio:** https://myportfolio-rho-lyart.vercel.app/
+
 ## A little about the portfolio
 
 I wanted the site to feel clean and personal, while still showing some of the things I enjoy working on. It includes:
@@ -56,10 +58,6 @@ A few files and folders you'll probably want to know about:
 - `public/resume/` — the resume PDF used by the download link
 
 Most of the personal information is kept in `data/profile.ts`, so that's a good place to start if you want to understand how the content is organized.
-
-## Live site
-
-The portfolio can be deployed on [Vercel](https://vercel.com/). Connect the GitHub repository to Vercel, import the project, and deploy it using the default Next.js settings.
 
 ## Let's connect
 
