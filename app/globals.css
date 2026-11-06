@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --background: #050611;
+  --foreground: #f7f8ff;
+  --muted: #a8b0c9;
+  --panel: rgba(12, 18, 39, 0.72);
+  --panel-strong: rgba(16, 24, 54, 0.88);
+  --line: rgba(255, 255, 255, 0.12);
+  --blue: #2f80ff;
+  --royal: #3157ff;
+  --purple: #a855f7;
+  --cyan: #5eead4;
+  --shadow: rgba(47, 128, 255, 0.28);
+  --skill-icon-bg: linear-gradient(135deg, rgba(47,128,255,.22), rgba(168,85,247,.22));
+  --skill-icon-color: #7ee7ff;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --background: #f8fbff;
+  --foreground: #0a1021;
+  --muted: #4c5875;
+  --panel: rgba(255, 255, 255, 0.76);
+  --panel-strong: rgba(255, 255, 255, 0.94);
+  --line: rgba(17, 24, 39, 0.12);
+  --blue: #125fe8;
+  --royal: #3047db;
+  --purple: #8a3ffc;
+  --cyan: #0891b2;
+  --shadow: rgba(18, 95, 232, 0.18);
+  --skill-icon-bg: linear-gradient(135deg, rgba(18,95,232,.10), rgba(138,63,252,.10));
+  --skill-icon-color: #3047db;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 18% 10%, rgba(49, 87, 255, 0.2), transparent 30rem),
+    radial-gradient(circle at 82% 4%, rgba(168, 85, 247, 0.2), transparent 28rem),
+    linear-gradient(180deg, var(--background), var(--background));
+  color: var(--foreground);
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body::before {
+  pointer-events: none;
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, black, transparent 72%);
+}
+
+::selection {
+  background: rgba(94, 234, 212, 0.28);
+}
+
+.font-display {
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+}
+
+.font-terminal {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+}
+
+.glass {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(22px);
+}
+
+.skill-icon {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--skill-icon-bg);
+  color: var(--skill-icon-color);
+}
+
+.section-shell {
+  width: min(1120px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+.aurora-text {
+  background: linear-gradient(120deg, var(--foreground), #94c5ff 38%, #d8b4fe 72%, var(--foreground));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.focus-ring {
+  outline: none;
+}
+
+.focus-ring:focus-visible {
+  box-shadow: 0 0 0 3px rgba(94, 234, 212, 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
